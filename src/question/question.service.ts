@@ -17,4 +17,12 @@ export class QuestionService {
   async findAllQuestions(): Promise<Question[]> {
     return this.questionModel.find().exec();
   }
+
+  async findOne(id: string): Promise<Question> {
+    return this.questionModel.findOne({ _id: id }).exec();
+  }
+
+  async delete(id: string): Promise</*DeleteResult*/ any> {
+    return this.questionModel.deleteOne({ _id: id });
+  }
 }
