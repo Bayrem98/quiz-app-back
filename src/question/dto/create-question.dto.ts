@@ -1,4 +1,4 @@
-export interface Question {
+export default class CreateQuestionDto {
   question: string;
   options: string[];
   theme: string;
